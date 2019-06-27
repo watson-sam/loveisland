@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d283744-acf9-4b59-a64c-55ce10ec3fba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/samwatson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/loveisland.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-20.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-21.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-22.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-23.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-24.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-25.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-26.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-27.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-28.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-29.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-30.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-05-31.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-01.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-02.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-03.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-04.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-05.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-07.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-08.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-09.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-11.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-12.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-13.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-14.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-15.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-16.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-17.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-19.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-20.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-21.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-22.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-23.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-24.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-25.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/2019-06-26.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/common/cli.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/common/functions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/att1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/manager/TweetCriteria.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/manager/TweetManager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/manager/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/manager/__init__.py.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/models/Tweet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/got3/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loveisland/twitter/sentiment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,39 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/twitter/att1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/twitter/sentiment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -122,20 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="606">
+              <caret line="111" column="7" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -204,18 +97,6 @@
               <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveisland" type="462c0819:PsiDirectoryNode" />
               <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -334,18 +215,18 @@
       <option name="presentableId" value="Default" />
       <updated>1561578882994</updated>
       <workItem from="1561578885873" duration="6246000" />
-      <workItem from="1561623000266" duration="169000" />
+      <workItem from="1561623000266" duration="257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6415000" />
+    <option name="totallyTimeSpent" value="6503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -359,7 +240,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.501221" side_tool="true" weight="0.3291536" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.498779" visible="true" weight="0.29362592" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.498779" visible="true" weight="0.29362592" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -469,8 +350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+        <state relative-caret-position="606">
+          <caret line="111" column="7" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
         </state>
       </provider>
     </entry>

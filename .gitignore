@@ -106,3 +106,8 @@ venv.bak/
 # Personal
 .DS_Store
 /data
+.idea
+/.idea
+.xml
+.idea/*
+
