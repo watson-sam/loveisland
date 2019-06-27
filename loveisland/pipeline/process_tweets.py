@@ -7,6 +7,10 @@ import pandas as pd
 import os
 import re
 
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
 
 class ProcessTweets(object):
     def __init__(self, args, d0):
@@ -95,6 +99,18 @@ class ProcessTweets(object):
             self.agg_df = self.agg_df.append(agg).reset_index(drop=True)
         return self
 
+    def format_time(self):
+        self.df["date"] = pd.to_datetime(self.df["date"])
+        self.df["hour"] = self.df["date"].dt.hour
+        self.df["date"] = self.df["date"].dt.date
+        return self
+
+    def contains_pic(self):
+        self.df["pic"] = self.df["processed"].apply(
+            lambda x: "yes" if "pic.twitter.com" in x else "no"
+        )
+        return self
+
     def save(self):
         path = os.path.join(self.args.bucket, "{}", str(self.d0) + ".csv")
         self.df.to_csv(path.format("processed"), index=False)
@@ -116,6 +132,8 @@ def main(args):
             .add_dummy_cols()\
             .weighted_sentiment()\
             .aggregate_all()\
+            .format_time()\
+            .contains_pic()\
             .save()
 
 
