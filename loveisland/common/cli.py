@@ -13,7 +13,7 @@ def base_parser():
         "--start_date",
         help="Start Date (YYYY-MM-DD)",
         type=dateutil.parser.isoparse,
-        default=dt.datetime.strptime("2019-05-20", "%Y-%m-%d")
+        default=dt.datetime.strptime("2019-05-20", "%Y-%m-%d").date()
     )
     parser.add_argument(
         "-e",
