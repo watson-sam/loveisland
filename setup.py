@@ -8,7 +8,8 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "get_tweets.py = loveisland.twitter.att1.run",
+            "get_tweets.py = loveisland.pipeline.get_tweets.run",
+            "preprocess.py = loveisland.pipeline.process_tweets.run",
         ]
     },
     install_requires=[],
