@@ -1,4 +1,4 @@
-from loveisland.twitter.got3.manager import TweetCriteria, TweetManager
+from loveisland.pipeline.got3.manager import TweetCriteria, TweetManager
 from loveisland.common.functions import get_dates, get_date_list
 from loveisland.common.cli import base_parser
 
@@ -40,7 +40,7 @@ def get_info(tweets):
 
 
 def save(args, info, d0):
-    path = os.path.join(args.bucket, str(d0) + ".csv")
+    path = os.path.join(args.bucket, "raw_tweets", str(d0) + ".csv")
     pd.DataFrame(info).to_csv(path, index=False)
 
 
@@ -48,6 +48,7 @@ def main(args):
     dates = get_date_list(args)
     for i in range(len(dates) - 1):
         d0, d1 = get_dates(i, dates)
+        print(d0)
         tweets = get_tweets(d0, d1)
         info = get_info(tweets)
         save(args, info, d0)

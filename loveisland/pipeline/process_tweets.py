@@ -7,10 +7,6 @@ import pandas as pd
 import os
 import re
 
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
-pd.set_option('display.width', 1000)
-
 
 class ProcessTweets(object):
     def __init__(self, args, d0):
@@ -20,6 +16,7 @@ class ProcessTweets(object):
         self.agg_df = pd.DataFrame()
 
     def read_data(self):
+        """Import data"""
         path = os.path.join(self.args.bucket, "raw_tweets", str(self.d0) + ".csv")
         self.df = pd.read_csv(path)
         return self
@@ -79,6 +76,7 @@ class ProcessTweets(object):
         return self
 
     def islander_agg(self, islander):
+        """Aggregate various metrics per islander/date"""
         AGG_JS = {
             "favs": "mean",
             "retwe": "mean",
@@ -94,24 +92,29 @@ class ProcessTweets(object):
         return df.rename(columns=RN_JS)
 
     def aggregate_all(self):
+        """Loop over all islanders, aggregating metrics"""
         for islander in ISLANDERS:
             agg = self.islander_agg(islander)
             self.agg_df = self.agg_df.append(agg).reset_index(drop=True)
         return self
 
     def format_time(self):
+        """Reformat the date column"""
         self.df["date"] = pd.to_datetime(self.df["date"])
         self.df["hour"] = self.df["date"].dt.hour
+        self.df["dotw"] = self.df["date"].dt.strftime("%A")
         self.df["date"] = self.df["date"].dt.date
         return self
 
     def contains_pic(self):
+        """Tag if tweet contains a picture"""
         self.df["pic"] = self.df["processed"].apply(
             lambda x: "yes" if "pic.twitter.com" in x else "no"
         )
         return self
 
     def save(self):
+        """Export data"""
         path = os.path.join(self.args.bucket, "{}", str(self.d0) + ".csv")
         self.df.to_csv(path.format("processed"), index=False)
         self.agg_df.to_csv(path.format("aggregated"), index=False)
