@@ -4,3 +4,4 @@ seaborn
 numpy
 pyquery
 nltk
+jupyter
