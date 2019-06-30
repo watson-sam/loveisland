@@ -1,4 +1,6 @@
 import datetime as dt
+import pandas as pd
+import glob
 
 
 def get_date_list(args):
@@ -19,3 +21,10 @@ def get_date_list(args):
 
 def get_dates(i, dates):
     return dates[i], dates[i + 1]
+
+
+def import_all(path="../data/processed/"):
+    df_list = [pd.read_csv(f) for f in glob.glob(path + "*.csv")]
+    df = pd.concat(df_list, ignore_index=True)
+    df["date"] = pd.to_datetime(df["date"])
+    return df
