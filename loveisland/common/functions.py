@@ -1,6 +1,7 @@
 import datetime as dt
 import pandas as pd
 import glob
+from loveisland.common.constants import ISLANDERS
 
 
 def get_date_list(args):
@@ -28,3 +29,36 @@ def import_all(path="../data/processed/"):
     df = pd.concat(df_list, ignore_index=True, sort=True)
     df["date"] = pd.to_datetime(df["date"])
     return df
+
+
+def get_palette():
+    palette = {}
+    for key, item in ISLANDERS.items():
+        palette[key] = item["col"]
+    return palette
+
+
+def get_islanders(when="original"):
+    islanders = []
+    for key, item in ISLANDERS.items():
+        if when == "original" and item["arrived"] == 1:
+            islanders.append(key)
+        elif when == "casa_amor" and item["arrived"] == 26:
+            islanders.append(key)
+    return islanders
+
+
+def str_to_list(string):
+    return (
+        string.replace("[", "")
+        .replace("]", "")
+        .replace("'", "")
+        .replace(" ", "")
+        .split(",")
+    )
+
+
+def get_islander_df():
+    df = pd.DataFrame.from_dict(ISLANDERS, orient="index")
+    df.index.name = "islander"
+    return df.reset_index()
