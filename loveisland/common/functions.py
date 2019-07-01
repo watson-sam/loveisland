@@ -24,7 +24,7 @@ def get_dates(i, dates):
 
 
 def import_all(path="../data/processed/"):
-    df_list = [pd.read_csv(f) for f in glob.glob(path + "*.csv")]
-    df = pd.concat(df_list, ignore_index=True)
+    df_list = [pd.read_csv(f, low_memory=False) for f in glob.glob(path + "*.csv")]
+    df = pd.concat(df_list, ignore_index=True, sort=True)
     df["date"] = pd.to_datetime(df["date"])
     return df

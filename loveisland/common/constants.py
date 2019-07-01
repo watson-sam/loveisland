@@ -37,6 +37,21 @@ FEMALE = [
 
 ISLANDERS = MALE + FEMALE
 
+ORIGINAL_ISLANDERS = [
+    "anton",
+    "curtis",
+    "michael",
+    "tommy",
+    "lucie",
+    "yewande",
+    "amber",
+    "amy",
+    "anna",
+    "joe",
+    "callum",
+    "sherif",
+]
+
 RELEVANT_ISLANDERS = [
     "anton",
     "curtis",

@@ -1,5 +1,6 @@
 import gensim
 from loveisland.common.functions import import_all
+from loveisland.common.constants import ISLANDERS
 from collections import Counter
 import seaborn as sns
 from matplotlib import pyplot as plt
@@ -27,7 +28,12 @@ def get_tokens(df, col="processed_text"):
     return [item for sublist in df[col].to_list() for item in sublist]
 
 
-def get_df(temp, col, date):
+def get_ngrams(df, col="processed_text"):
+    df["inc_ngram"] = df[col].apply(lambda x: "yes" if "_" in x else "no")
+    return [i for i in get_tokens(df) if "_" in i]
+
+
+def get_df(temp, date, col="processed_text"):
     df = get_counts(get_tokens(temp, col))
     df["n_tweets"] = temp.url.nunique()
     df["date"] = date
@@ -39,7 +45,7 @@ def tokens_by_dt(df, dt_col="date", col="processed_text"):
     df_list = []
     for date in df[dt_col].unique():
         temp = df[df[dt_col] == date]
-        df_list.append(get_df(temp, col, date))
+        df_list.append(get_df(temp, date, col))
     return pd.concat(df_list, ignore_index=True)
 
 
@@ -69,12 +75,17 @@ if __name__ in "__main__":
     df["processed_text"] = df["processed_text"].apply(lambda x: str_to_list(x))
     df = ngrams(df)
     df = ngrams(df)
-    all_tokens = get_tokens(df)
-    counts = get_counts(all_tokens)
+
+    n_grams = get_ngrams(df)
+    print(Counter(n_grams))
+    n_grams = [n for i in ISLANDERS for n in n_grams if i in n]
+    print(Counter(n_grams))
+
+    counts = get_df(df, "all")
 
     fig = plt.figure(figsize=(15, 5))
     ax1 = fig.add_subplot(111)
-    sns.barplot("token", "count", data=counts.head(20), color="Red", ax=ax1)
+    sns.barplot("token", "percent", data=counts.head(20), color="Red", ax=ax1)
     plt.xticks(rotation=50)
     plt.show()
 
