@@ -17,8 +17,10 @@ req:
 
 build: venv wheel req
 
+spacy:
+	venv/bin/python3 -m spacy download en_core_web_lg
+
 deploy:
 	venv/bin/python3 setup.py bdist_wheel
-	venv/bin/pip3 install loveisland
 
-full: clean build deploy
+full: clean build deploy spacy

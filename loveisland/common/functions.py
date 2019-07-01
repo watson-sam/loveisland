@@ -1,10 +1,12 @@
 import datetime as dt
+import pandas as pd
+import glob
 
 
 def get_date_list(args):
     if args.yesterday:
-        sd = (dt.datetime.now() - dt.timedelta(days=1)).date()
-        ed = dt.datetime.now().date()
+        sd = dt.datetime.now() - dt.timedelta(days=1)
+        ed = dt.datetime.now()
     else:
         sd = args.start_date
         ed = args.end_date
@@ -13,9 +15,16 @@ def get_date_list(args):
 
     dates = []
     for i in range(delta + 1):
-        dates.append(sd + dt.timedelta(days=i))
+        dates.append((sd + dt.timedelta(days=i)).date())
     return dates
 
 
 def get_dates(i, dates):
     return dates[i], dates[i + 1]
+
+
+def import_all(path="../data/processed/"):
+    df_list = [pd.read_csv(f, low_memory=False) for f in glob.glob(path + "*.csv")]
+    df = pd.concat(df_list, ignore_index=True, sort=True)
+    df["date"] = pd.to_datetime(df["date"])
+    return df

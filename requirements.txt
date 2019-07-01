@@ -4,3 +4,6 @@ seaborn
 numpy
 pyquery
 nltk
+jupyter
+spacy
+gensim

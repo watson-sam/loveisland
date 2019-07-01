@@ -9,6 +9,12 @@ MALE = [
     "joe",
     "sherif",
     "callum",
+    "stevie",
+    "ovie",
+    "marvin",
+    "dan",
+    "dennon",
+    "george",
 ]
 
 FEMALE = [
@@ -21,9 +27,30 @@ FEMALE = [
     "molly",
     "yewande",
     "elma",
+    "nabila",
+    "maria",
+    "lavena",
+    "jourdan",
+    "belle",
+    "joanna",
 ]
 
 ISLANDERS = MALE + FEMALE
+
+ORIGINAL_ISLANDERS = [
+    "anton",
+    "curtis",
+    "michael",
+    "tommy",
+    "lucie",
+    "yewande",
+    "amber",
+    "amy",
+    "anna",
+    "joe",
+    "callum",
+    "sherif",
+]
 
 RELEVANT_ISLANDERS = [
     "anton",
@@ -39,6 +66,21 @@ RELEVANT_ISLANDERS = [
     "amber",
     "amy",
     "anna",
+]
+
+CASA_AMOR = [
+    "nabila",
+    "maria",
+    "lavena",
+    "jourdan",
+    "belle",
+    "joanna",
+    "stevie",
+    "ovie",
+    "marvin",
+    "dan",
+    "dennon",
+    "george",
 ]
 
 PALETTE = {
@@ -61,4 +103,74 @@ PALETTE = {
     "callum": "#00958B",
     "arabella": "#F7F2F4",
     "elma": "#96C1C7",
+    "nabila": "#BE3433",
+    "maria": "#F0353B",
+    "lavena": "#FDB054",
+    "jourdan": "#1C4B32",
+    "stevie": "#EDC4C0",
+    "ovie": "#303D2E",
+    "marvin": "#2E9065",
+    "belle": "#F8D2F1",
+    "joanna": "#E8FD7D",
+    "dan": "#C7DDD1",
+    "dennon": "#387197",
+    "george": "#1E191F",
 }
+
+EXTRA_STOPS = [
+    "say",
+    "go",
+    "get",
+    "give",
+    "come",
+    "be",
+    "way",
+    "look",
+    "thing",
+    "make",
+    "send",
+    "place",
+    "line",
+    "run",
+    "use",
+    "move",
+    "have",
+    "told",
+    "having",
+    "given",
+    "got",
+    "getting",
+    "com",
+    "www",
+    "http",
+    "https",
+    "co",
+    "pic",
+    "twitter",
+    "like",
+    "not",
+]
+
+PUNC_LIST = [
+    ".",
+    ";",
+    ":",
+    "!",
+    "?",
+    "/",
+    "\\",
+    ",",
+    "#",
+    "@",
+    "$",
+    "&",
+    ")",
+    "(",
+    '"',
+    "_",
+    "-",
+    '"',
+    "\n",
+    "\r",
+    "”",
+]

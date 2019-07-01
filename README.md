@@ -38,11 +38,11 @@ python3 venv/bin/preprocess.py --start_date 2019-06-26 --end_date 2019-06-27
 
 
 ### Ideas
-- N tweets per day of the week, time of day, date 
-- N tweets per person -> trended (need to do "Tom" and "Tommy" differently)
+- N tweets per day of the week, time of day, date (done)
+- N tweets per person -> trended (need to do "Tom" and "Tommy" differently) (done)
 - Bigram and trigram analysis (can we pull out couples??)
 - Topic models per day, week, all time 
 - Most "influential people" (by likes / retweets)
-- Sentiment per person 
+- Sentiment per person (done)
 - "Weighted" sentiment (n likes/retweets)
-- n pictures ("pic.twitter.com") etc
+- n pictures ("pic.twitter.com") etc (done)
