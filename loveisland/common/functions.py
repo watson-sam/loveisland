@@ -49,12 +49,18 @@ def get_islanders(when="original"):
 
 
 def str_to_list(string):
-    return (
-        string.replace("[", "")
-        .replace("]", "")
-        .replace("'", "")
-        .replace(" ", "")
-        .split(",")
+    string = str(string)
+    return list(
+        filter(
+            None,
+            (
+                string.replace("[", "")
+                .replace("]", "")
+                .replace("'", "")
+                .strip()
+                .split(",")
+            ),
+        )
     )
 
 

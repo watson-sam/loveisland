@@ -12,11 +12,6 @@ import spacy
 
 nlp = spacy.load("en_core_web_lg")
 
-pd.set_option("display.max_rows", 500)
-pd.set_option("display.max_columns", 500)
-pd.set_option("display.width", 1000)
-# pd.set_option('display.max_colwidth', -1)
-
 
 class ProcessTweets(object):
     def __init__(self, args, d0):
@@ -120,6 +115,7 @@ class ProcessTweets(object):
         return [w for w in words if len(w) > str_l]
 
     def wrapper(self, text):
+        """Compile all preprocessing functions"""
         x = self.string_wise(text)
         x = self.rm_numeric(x)
         x = self.remove_non_ascii(x)
@@ -130,6 +126,7 @@ class ProcessTweets(object):
         return x, " ".join(x)
 
     def apply_processing(self):
+        """Populate tokens and processed text columns"""
         self.df["tokens"], self.df["processed_text"] = zip(
             *self.df["text"].apply(lambda x: self.wrapper(x))
         )
@@ -157,11 +154,7 @@ class ProcessTweets(object):
 def main(args):
     dates = get_date_list(args)
     for i in range(len(dates) - 1):
-    # for i in range(len(dates[:1])):
         d0, d1 = get_dates(i, dates)
-
-        # pt = ProcessTweets(args, d0)
-        # pt.read_data().apply_processing().get_sentiment().weighted_sentiment().save()
 
         pt = ProcessTweets(args, d0)
         pt.read_data()\
@@ -178,7 +171,6 @@ def main(args):
 
 def run():
     args = base_parser().parse_args()
-
     for sw in EXTRA_STOPS:
         nlp.vocab[sw].is_stop = True
     main(args)
