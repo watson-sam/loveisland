@@ -1,5 +1,5 @@
 from loveisland.common.functions import get_dates, get_date_list
-from loveisland.common.constants import ISLANDERS, PUNC_LIST, EXTRA_STOPS
+from loveisland.common.constants import ISLANDERS, PUNC_LIST, EXTRA_STOPS, APPOS
 from loveisland.common.cli import base_parser
 
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
@@ -23,38 +23,13 @@ class ProcessTweets(object):
         """Import data"""
         path = os.path.join(self.args.bucket, "raw_tweets", str(self.d0) + ".csv")
         self.df = pd.read_csv(path)
-        print(len(self.df))
+        self.df["text"] = self.df["text"].astype(str)
+        print("Running for", str(self.d0), "on", len(self.df), "tweets...")
         return self
-
-    @staticmethod
-    def remove_li_ref(x):
-        """Remove all references to love island out of each tweet
-        (reducing noise for sentiment analysis)"""
-        return (
-            x.replace("Love island", "")
-            .replace("loveisland", "")
-            .replace("LoveIsland", "")
-            .replace("Love Island", "")
-            .replace("love island", "")
-            .replace("#", "")
-        )
 
     def get_user(self, col="url"):
         """From tweet url extract the username"""
         self.df["user"] = self.df[col].apply(lambda x: x.split("/")[3])
-        return self
-
-    def initial_preprocess(self, col="text", rtn_col="processed_text"):
-        """Apply the brief first pre-processing steps"""
-        self.df[rtn_col] = self.df[col].astype(str)
-        self.df[rtn_col] = self.df[rtn_col].apply(lambda x: self.remove_li_ref(x))
-        return self
-
-    def get_sentiment(self, col="processed_text"):
-        """Find compound sentiment score"""
-        sia = SIA()
-        self.df["score"] = self.df[col].apply(lambda x: sia.polarity_scores(str(x)))
-        self.df["score"] = self.df["score"].apply(lambda x: x["compound"])
         return self
 
     @staticmethod
@@ -62,7 +37,7 @@ class ProcessTweets(object):
         """Return list of islanders mentioned in a tweet"""
         return [e for e in ISLANDERS if re.findall("\\b" + e + "\\b", tweet.lower())]
 
-    def get_islanders(self, col="processed_text"):
+    def get_islanders(self, col="text"):
         """Add column containing list of islanders mentioned"""
         self.df["islanders"] = self.df[col].apply(lambda x: self.get_list(x))
         return self
@@ -75,11 +50,6 @@ class ProcessTweets(object):
             )
         return self
 
-    def weighted_sentiment(self):
-        """Apply a weighting (n favourites) to each sentiment score"""
-        self.df["weight_senti"] = self.df["favs"] * self.df["score"]
-        return self
-
     def format_time(self):
         """Reformat the date column"""
         self.df["date"] = pd.to_datetime(self.df["date"])
@@ -88,7 +58,7 @@ class ProcessTweets(object):
         self.df["date"] = self.df["date"].dt.date
         return self
 
-    def contains_pic(self, col="processed_text"):
+    def contains_pic(self, col="text"):
         """Tag if tweet contains a picture"""
         self.df["pic"] = self.df[col].apply(
             lambda x: "yes" if "pic.twitter.com" in x else "no"
@@ -101,12 +71,18 @@ class ProcessTweets(object):
         # Make all text lowercase
         text = text.lower()
         # Remove all the punctuation in above list (quicker / more control that using re)
+        for key, item in APPOS.items():
+            text = text.replace(key, item)
         for punc in PUNC_LIST:
             text = text.replace(punc, " ")
         for punc in ["'", "`", "’"]:
             text = text.replace(punc, "")
         # Remove any leading and trailing whitespace
         return text.strip()
+
+    @staticmethod
+    def rm_numeric(text):
+        return "".join(i for i in text if not i.isdigit())
 
     @staticmethod
     def remove_non_ascii(words):
@@ -118,32 +94,54 @@ class ProcessTweets(object):
         )
 
     @staticmethod
-    def drop_space(words):
-        """Remove all spaces from text"""
-        return [word.replace(" ", "") for word in words]
+    def remove_li_ref(x):
+        """Remove all references to love island out of each tweet
+        (reducing noise for sentiment analysis)"""
+        return x.replace("love island", "").replace("loveisland", "").replace("#", "")
 
     @staticmethod
     def spacy_inter(words):
         """Remove stopwords, punctuation and lemmatize words + tokenize"""
-        return [
-            word.lemma_ for word in nlp(words) if not word.is_stop and not word.is_punct
-        ]
+        return [w.lemma_ for w in nlp(words) if not w.is_stop and not w.is_punct]
 
     @staticmethod
-    def remove_small_str(words, l=2):
+    def drop_space(words):
+        """Remove all spaces from text"""
+        return [word.strip() for word in words]
+
+    @staticmethod
+    def remove_small_str(words, str_l=2):
         """Remove words with a length less than l"""
-        return [word.strip() for word in words if len(word) > l]
+        return [w for w in words if len(w) > str_l]
 
     def wrapper(self, text):
+        """Compile all preprocessing functions"""
         x = self.string_wise(text)
+        x = self.rm_numeric(x)
         x = self.remove_non_ascii(x)
         x = self.remove_li_ref(x)
         x = self.spacy_inter(x)
         x = self.drop_space(x)
-        return self.remove_small_str(x)
+        x = self.remove_small_str(x)
+        return x, " ".join(x)
 
-    def apply_processing(self, col="processed_text"):
-        self.df[col] = self.df[col].apply(lambda x: self.wrapper(x))
+    def apply_processing(self):
+        """Populate tokens and processed text columns"""
+        self.df["tokens"], self.df["processed_text"] = zip(
+            *self.df["text"].apply(lambda x: self.wrapper(x))
+        )
+        return self
+
+    def get_sentiment(self, col="processed_text"):
+        """Find compound sentiment score"""
+        sia = SIA()
+        self.df["score"] = self.df[col].apply(lambda x: sia.polarity_scores(str(x)))
+        self.df["score"] = self.df["score"].apply(lambda x: x["compound"])
+        return self
+
+    def weighted_sentiment(self):
+        """Apply a weighting (n favourites) to each sentiment score"""
+        self.df["weight_senti"] = self.df["favs"] * self.df["score"]
         return self
 
     def save(self):
@@ -161,20 +159,18 @@ def main(args):
         pt = ProcessTweets(args, d0)
         pt.read_data()\
             .get_user()\
-            .initial_preprocess()\
-            .get_sentiment()\
             .get_islanders()\
             .add_dummy_cols()\
-            .weighted_sentiment()\
             .format_time()\
             .contains_pic()\
             .apply_processing()\
+            .get_sentiment()\
+            .weighted_sentiment()\
             .save()
 
 
 def run():
     args = base_parser().parse_args()
-
     for sw in EXTRA_STOPS:
         nlp.vocab[sw].is_stop = True
     main(args)
