@@ -64,6 +64,11 @@ def str_to_list(string):
     )
 
 
+def col_to_list(df, col):
+    df[col] = df[col].apply(lambda x: str_to_list(x))
+    return df
+
+
 def get_islander_df():
     df = pd.DataFrame.from_dict(ISLANDERS, orient="index")
     df.index.name = "islander"

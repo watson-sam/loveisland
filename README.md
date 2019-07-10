@@ -46,3 +46,6 @@ python3 venv/bin/preprocess.py --start_date 2019-06-26 --end_date 2019-06-27
 - Sentiment per person (done)
 - "Weighted" sentiment (n likes/retweets)
 - n pictures ("pic.twitter.com") etc (done)
+
+
+- Devicive days (ie recoupling after casa amor) - distirbution per islander to see if two disrtinct gorups (for and against each isaldner)
