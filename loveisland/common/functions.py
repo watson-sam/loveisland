@@ -73,3 +73,8 @@ def get_islander_df():
     df = pd.DataFrame.from_dict(ISLANDERS, orient="index")
     df.index.name = "islander"
     return df.reset_index()
+
+
+# import pickle
+# loaded_model = pickle.load(open("/Users/samwatson/projects/loveisland/data/best_param.pkl", "rb"))
+# print(loaded_model)z

@@ -7,15 +7,13 @@ import os
 
 
 def get_tweets(d0, d1):
-    tweetCriteria = (
+    return TweetManager.getTweets(
         TweetCriteria()
         .setQuerySearch("loveisland")
         .setSince(str(d0))
         .setUntil(str(d1))
-        # .setMaxTweets(100)
         .setLang("en")
     )
-    return TweetManager.getTweets(tweetCriteria)
 
 
 def fill_dict(tweet):
@@ -32,7 +30,7 @@ def fill_list(info, tweet):
     info.append(fill_dict(tweet))
 
 
-def get_info(tweets):
+def get_tweet_info(tweets):
     info = []
     for tweet in tweets:
         fill_list(info, tweet)
@@ -48,11 +46,11 @@ def main(args):
     dates = get_date_list(args)
     for i in range(len(dates) - 1):
         d0, d1 = get_dates(i, dates)
-        print(d0)
+        print("Running for", d0)
         tweets = get_tweets(d0, d1)
-        info = get_info(tweets)
-        save(args, info, d0)
-        print(d0, len(info))
+        tweets = get_tweet_info(tweets)
+        save(args, tweets, d0)
+        print("Done", d0, "found", len(tweets), "tweets")
 
 
 def run():

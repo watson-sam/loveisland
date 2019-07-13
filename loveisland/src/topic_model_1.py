@@ -2,20 +2,23 @@ from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import GridSearchCV
 
-# import gensim
+import os
 import seaborn as sns
 from matplotlib import pyplot as plt
 import pickle
-
 import pandas as pd
+
+from loveisland.common.functions import get_dates, get_date_list
+from loveisland.common.cli import base_parser
 
 N_TOPICS = [10, 15, 20, 25, 30]
 L_DECAY = [0.3, 0.5, 0.7, 0.9]
 SEARCH_PARAM = {"n_components": N_TOPICS, "learning_decay": L_DECAY}
 
 
-def import_data(path):
-    df = pd.read_csv(path)
+def import_data(args, dt):
+    """Import and format data"""
+    df = pd.read_csv(os.path.join(args.bucket, "processed", str(dt) + ".csv"))
     df["processed_text"] = df["processed_text"].astype(str)
     df["tokens"] = df["processed_text"].apply(lambda x: x.split(" "))
     return df
@@ -25,12 +28,7 @@ def vectorize(df, col="processed_text"):
     """Get feature names + back of words"""
     vectorizer = CountVectorizer()
     A = vectorizer.fit_transform(df[col])
-    return A, vectorizer.get_feature_names()
-
-
-# def w2v_mod(df, col="tokens"):
-#     """Create word2vec model as list of documents"""
-#     return gensim.models.Word2Vec(df[col], min_count=1)
+    return A, vectorizer
 
 
 def setup_grid():
@@ -49,7 +47,7 @@ def get_ll(m, learning_decay):
 
 
 def fill_df(model):
-    df = []
+    df = list()
     for i in L_DECAY:
         ll_res = get_ll(model.cv_results_, i)
         for index, (ll, t) in enumerate(zip(ll_res, N_TOPICS)):
@@ -59,8 +57,24 @@ def fill_df(model):
     return pd.DataFrame(df)
 
 
-def display_topics(model, feature_names, n_words):
-    for topic_idx, topic in enumerate(model.components_):
+def ll_graph(mod):
+    ll_df = fill_df(mod)
+    fig = plt.figure(figsize=(12, 8))
+    ax = fig.add_subplot(111)
+    sns.lineplot(
+        "Number of Topics",
+        "Log Likelyhood Score",
+        data=ll_df,
+        ax=ax,
+        hue="Learning decay",
+    )
+    plt.title("Choosing Optimal LDA Model")
+    plt.legend(title="Learning decay", loc="best")
+    plt.show()
+
+
+def display_topics(mod, feature_names, n_words):
+    for topic_idx, topic in enumerate(mod.components_):
         print(
             "Topic",
             topic_idx,
@@ -69,43 +83,62 @@ def display_topics(model, feature_names, n_words):
         )
 
 
-dt = "2019-06-07"
-df = import_data(
-    "/Users/samwatson/projects/loveisland/data/processed/{}.csv".format(dt)
-)
-# df = df[:5000]
-A, bag_of_words = vectorize(df)
-# w2v_model = w2v_mod(df)
-
-model = setup_grid()
-model.fit(A)
-best_mod = model.best_estimator_
-
-# Model Parameters
-print("Best Model's Params: ", model.best_params_)
-print("Best Log Likelihood Score: ", model.best_score_)
-print("Model Perplexity: ", best_mod.perplexity(A))
-
-ll_df = fill_df(model)
+def save_aspects(args, dt, mod, vectorizer):
+    path = os.path.join(args.bucket, "{}", str(dt) + ".pkl")
+    pickle.dump(mod, open(path.format("models"), "wb"))
+    pickle.dump(vectorizer.vocabulary_, open(path.format("vocab"), "wb"))
 
 
-# Show graph
-fig = plt.figure(figsize=(12, 8))
-ax = fig.add_subplot(111)
-sns.lineplot(
-    "Number of Topics", "Log Likelyhood Score", data=ll_df, ax=ax, hue="Learning decay"
-)
-plt.title("Choosing Optimal LDA Model")
-plt.legend(title="Learning decay", loc="best")
-plt.show()
+def save_best_params(args, dt, grid):
+    path = os.path.join(args.bucket, "best_param.pkl")
+    if os.path.exists(path):
+        with open(path, "rb") as f:
+            js = pickle.load(f)
+    else:
+        js = dict()
+
+    js[str(dt)] = grid.best_params_
+
+    pickle.dump(js, open(path, "wb"))
 
 
-filename = "/Users/samwatson/projects/loveisland/data/models/{}.csv".format(dt)
-pickle.dump(best_mod, open(filename, "wb"))
-loaded_model = pickle.load(open(filename, "rb"))
+def main(args):
+    dates = get_date_list(args)
+    for i in range(len(dates) - 1):
+        d0, d1 = get_dates(i, dates)
+        print("Running for", d0)
 
-no_top_words = 10
-display_topics(loaded_model, bag_of_words, no_top_words)
+        df = import_data(args, d0)
+        A, vectorizer = vectorize(df)
+        # bag_of_words = vectorizer.get_feature_names()
+
+        grid = setup_grid()
+        grid.fit(A)
+
+        best_mod = grid.best_estimator_
+
+        save_aspects(args, d0, best_mod, vectorizer)
+        save_best_params(args, d0, grid)
+
+        print("Topics for", d0, "found and saved")
+
+        # print("Best Model's Parameters:", grid.best_params_)
+        # print("Best Log Likelihood Score:", grid.best_score_)
+        # print("Model Perplexity:", best_mod.perplexity(A))
+        #
+        # ll_graph(best_mod)
+        #
+        # no_top_words = 10
+        # display_topics(best_mod, bag_of_words, no_top_words)
+
+
+def run():
+    args = base_parser().parse_args()
+    main(args)
+
+
+if __name__ in "__main__":
+    run()
 
 
 # import pyLDAvis.sklearn
@@ -113,3 +146,5 @@ display_topics(loaded_model, bag_of_words, no_top_words)
 # pyLDAvis.enable_notebook()
 # panel = pyLDAvis.sklearn.prepare(lda_model, A, vectorizer, mds='tsne')
 # panel
+#
+# loaded_model = pickle.load(open(filename, "rb"))
