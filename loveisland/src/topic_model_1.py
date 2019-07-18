@@ -18,7 +18,9 @@ SEARCH_PARAM = {"n_components": N_TOPICS, "learning_decay": L_DECAY}
 
 def import_data(args, dt):
     """Import and format data"""
-    df = pd.read_csv(os.path.join(args.bucket, "processed", str(dt) + ".csv"))
+    df = pd.read_csv(
+        os.path.join(args.bucket, "processed", str(dt) + ".csv"), low_memory=False
+    )
     df["processed_text"] = df["processed_text"].astype(str)
     df["tokens"] = df["processed_text"].apply(lambda x: x.split(" "))
     return df
@@ -148,3 +150,4 @@ if __name__ in "__main__":
 # panel
 #
 # loaded_model = pickle.load(open(filename, "rb"))
+

@@ -193,7 +193,7 @@ ISLANDERS = {
         "sex": "female",
         "relevant": False,
         "arrived": 26,
-        "dumped": 0,
+        "dumped": 0,  # DUMPED
     },
     "dan": {
         "col": "#C7DDD1",
@@ -227,9 +227,31 @@ ISLANDERS = {
         "col": "#AE2B07",
         "sex": "female",
         "relevant": False,
-        "arrived": 26,
-        "dumped": 36,
+        "arrived": 37,
+        "dumped": 0,
     },
+
+    # "george": {
+    #     "col": "#1E191F",
+    #     "sex": "male",
+    #     "relevant": False,
+    #     "arrived": 26,
+    #     "dumped": 36,
+    # },
+    # "chris": {
+    #     "col": "#4B3D2C",
+    #     "sex": "male",
+    #     "relevant": False,
+    #     "arrived": 37,
+    #     "dumped": 0,
+    # },
+    # "francesca": {
+    #     "col": "#AE2B07",
+    #     "sex": "female",
+    #     "relevant": False,
+    #     "arrived": 37,
+    #     "dumped": 0,
+    # },
 }
 
 EXTRA_STOPS = [

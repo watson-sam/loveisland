@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d283744-acf9-4b59-a64c-55ce10ec3fba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/loveisland/src/temp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loveisland/common/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/common/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loveisland/src/topic_model_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/src/topic_model_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/initial ideas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/initial ideas.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loveisland/src/topic_model_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+            <state relative-caret-position="530">
+              <caret line="152" selection-start-line="152" selection-end-line="152" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -29,9 +31,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2925">
+              <caret line="195" column="22" selection-start-line="195" selection-start-column="22" selection-end-line="195" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
+            <state relative-caret-position="645">
               <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="32" />
               <folding>
                 <element signature="e#0#72#0" expanded="true" />
@@ -43,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loveisland/pipeline/process_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="1905">
               <caret line="137" column="76" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="76" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
@@ -85,9 +96,10 @@
         <option value="$PROJECT_DIR$/loveisland/src/text_analysis.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" />
-        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
         <option value="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" />
         <option value="$PROJECT_DIR$/loveisland/common/functions.py" />
+        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
+        <option value="$PROJECT_DIR$/loveisland/src/temp.py" />
         <option value="$PROJECT_DIR$/loveisland/src/topic_model_1.py" />
       </list>
     </option>
@@ -104,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +128,12 @@
               <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveisland" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="pylda_htmls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
@@ -143,7 +162,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,12 +342,15 @@
       <workItem from="1562250076548" duration="17000" />
       <workItem from="1562256329805" duration="1216000" />
       <workItem from="1562437077460" duration="8692000" />
-      <workItem from="1562788877088" duration="10147000" />
+      <workItem from="1562788877088" duration="15167000" />
+      <workItem from="1563314438791" duration="2021000" />
+      <workItem from="1563376955030" duration="2315000" />
+      <workItem from="1563476431414" duration="178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69783000" />
+    <option name="totallyTimeSpent" value="79317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,7 +365,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14163615" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14652015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,7 +379,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291536" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" weight="0.292581" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" weight="0.23092999" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" weight="0.20585161" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Jupyter" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -483,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3300">
-          <caret line="220" column="22" lean-forward="true" selection-start-line="220" selection-start-column="22" selection-end-line="220" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/models/2019-06-07.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -503,26 +517,6 @@
     <entry file="file://$PROJECT_DIR$/data/best_param.pkl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/process_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="137" column="76" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_tweets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -533,12 +527,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/pylda_htmls/2019-06-24.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3498" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/src/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/src/topic_model_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+        <state relative-caret-position="530">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2925">
+          <caret line="195" column="22" selection-start-line="195" selection-start-column="22" selection-end-line="195" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/process_tweets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="137" column="76" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
