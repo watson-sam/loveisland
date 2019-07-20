@@ -41,7 +41,10 @@ class GetTweets(object):
 
     def save(self):
         path = os.path.join(
-            self.args.bucket, self.args.season, "raw_tweets", str(self.d0) + ".csv"
+            self.args.bucket,
+            "season_" + str(self.args.season),
+            "raw_tweets",
+            str(self.d0) + ".csv",
         )
         pd.DataFrame(self.all_info).to_csv(path, index=False)
         return self

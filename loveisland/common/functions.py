@@ -26,7 +26,7 @@ class Functions(object):
         return dates[i], dates[i + 1]
 
     @staticmethod
-    def import_all(path="../data/season5/processed/"):
+    def import_all(path="../data/season_5/processed/"):
         df_list = [pd.read_csv(f, low_memory=False) for f in glob.glob(path + "*.csv")]
         df = pd.concat(df_list, ignore_index=True, sort=True)
         df["date"] = pd.to_datetime(df["date"])

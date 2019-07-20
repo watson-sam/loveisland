@@ -25,7 +25,10 @@ class ProcessTweets(object):
     def read_data(self):
         """Import data"""
         path = os.path.join(
-            self.args.bucket, self.args.season, "raw_tweets", str(self.d0) + ".csv"
+            self.args.bucket,
+            "season_" + str(self.args.season),
+            "raw_tweets",
+            str(self.d0) + ".csv"
         )
         self.df = pd.read_csv(path)
         self.df["text"] = self.df["text"].astype(str)
@@ -150,7 +153,12 @@ class ProcessTweets(object):
 
     def save(self):
         """Export data"""
-        path = os.path.join(self.args.bucket, "{}", str(self.d0) + ".csv")
+        path = os.path.join(
+            self.args.bucket,
+            "season_" + str(self.args.season),
+            "{}",
+            str(self.d0) + ".csv"
+        )
         self.df.to_csv(path.format("processed"), index=False)
         return self
 

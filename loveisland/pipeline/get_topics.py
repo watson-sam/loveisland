@@ -8,6 +8,7 @@ from sklearn.model_selection import GridSearchCV
 import os
 import pickle
 import pandas as pd
+import pyLDAvis.sklearn
 
 N_TOPICS = [10, 15, 20, 25, 30]
 L_DECAY = [0.3, 0.5, 0.7, 0.9]
@@ -27,7 +28,10 @@ class GetTopics(object):
         """Import and format data"""
         self.df = pd.read_csv(
             os.path.join(
-                self.args.bucket, self.args.season, "processed", str(self.d0) + ".csv"
+                self.args.bucket,
+                "season_" + str(self.args.season),
+                "processed",
+                str(self.d0) + ".csv",
             ),
             low_memory=False,
         )
@@ -42,7 +46,9 @@ class GetTopics(object):
         return self
 
     def save_best_params(self, grid):
-        path = os.path.join(self.args.bucket, self.args.season, "best_param.pkl")
+        path = os.path.join(
+            self.args.bucket, "season_" + str(self.args.season), "best_param.pkl"
+        )
 
         if os.path.exists(path):
             with open(path, "rb") as f:
@@ -69,11 +75,27 @@ class GetTopics(object):
 
     def save_aspects(self):
         path = os.path.join(
-            self.args.bucket, self.args.season, "{}", str(self.d0) + ".pkl"
+            self.args.bucket,
+            "season_" + str(self.args.season),
+            "{}",
+            str(self.d0) + ".pkl",
         )
         pickle.dump(self.mod, open(path.format("models"), "wb"))
         pickle.dump(self.vectorizer.vocabulary_, open(path.format("vocab"), "wb"))
         return self
+
+    def get_visual(self):
+        p = pyLDAvis.sklearn.prepare(self.mod, self.A, self.vectorizer)
+        pyLDAvis.save_html(
+            p,
+            os.path.join(
+                self.args.bucket,
+                "season_" + str(self.args.season),
+                "pylda_htmls",
+                str(self.d0) + ".html",
+            ),
+        )
+        return p
 
 
 def main(args):
@@ -83,7 +105,7 @@ def main(args):
 
         print("Running for", d0)
         gt = GetTopics(args, d0)
-        gt.import_data().vectorize().get_best().save_aspects()
+        gt.import_data().vectorize().get_best().save_aspects().get_visual()
         print("Topics for", d0, "found and saved")
 
 
