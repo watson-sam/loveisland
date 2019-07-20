@@ -1,5 +1,5 @@
 import gensim
-from loveisland.common.functions import import_all
+from loveisland.common.functions import Functions as F
 from loveisland.common.constants import ISLANDERS
 from collections import Counter
 import seaborn as sns

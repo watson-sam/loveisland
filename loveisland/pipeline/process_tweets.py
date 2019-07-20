@@ -1,4 +1,4 @@
-from loveisland.common.functions import get_dates, get_date_list
+from loveisland.common.functions import Functions as F
 from loveisland.common.constants import ISLANDERS, PUNC_LIST, EXTRA_STOPS, APPOS
 from loveisland.common.cli import base_parser
 
@@ -14,14 +14,19 @@ nlp = spacy.load("en_core_web_lg")
 
 
 class ProcessTweets(object):
-    def __init__(self, args, d0):
+    def __init__(self, args, d0, islanders):
         self.args = args
         self.d0 = d0
         self.df = None
+        self.islanders = {
+            k: v for k, v in islanders.items() if v["season"] == args.season
+        }
 
     def read_data(self):
         """Import data"""
-        path = os.path.join(self.args.bucket, "raw_tweets", str(self.d0) + ".csv")
+        path = os.path.join(
+            self.args.bucket, self.args.season, "raw_tweets", str(self.d0) + ".csv"
+        )
         self.df = pd.read_csv(path)
         self.df["text"] = self.df["text"].astype(str)
         print("Running for", str(self.d0), "on", len(self.df), "tweets...")
@@ -32,10 +37,9 @@ class ProcessTweets(object):
         self.df["user"] = self.df[col].apply(lambda x: x.split("/")[3])
         return self
 
-    @staticmethod
-    def get_list(tweet):
+    def get_list(self, tweet):
         """Return list of islanders mentioned in a tweet"""
-        return [e for e in ISLANDERS if re.findall("\\b" + e + "\\b", tweet.lower())]
+        return [e for e in self.islanders if re.findall("\\b" + e + "\\b", tweet.lower())]
 
     def get_islanders(self, col="text"):
         """Add column containing list of islanders mentioned"""
@@ -44,9 +48,9 @@ class ProcessTweets(object):
 
     def add_dummy_cols(self):
         """Create dummy variable columns for each islander"""
-        for pers in ISLANDERS:
-            self.df[pers] = self.df["islanders"].apply(
-                lambda x: pers if pers in x else "nan"
+        for i, item in self.islanders.items():
+            self.df[i] = self.df["islanders"].apply(
+                lambda x: i if i in x else "nan"
             )
         return self
 
@@ -152,20 +156,20 @@ class ProcessTweets(object):
 
 
 def main(args):
-    dates = get_date_list(args)
+    dates = F.get_date_list(args)
     for i in range(len(dates) - 1):
-        d0, d1 = get_dates(i, dates)
+        d0, d1 = F.get_dates(i, dates)
 
-        pt = ProcessTweets(args, d0)
-        pt.read_data()\
-            .get_user()\
-            .get_islanders()\
-            .add_dummy_cols()\
-            .format_time()\
-            .contains_pic()\
-            .apply_processing()\
-            .get_sentiment()\
-            .weighted_sentiment()\
+        pt = ProcessTweets(args, d0, ISLANDERS)
+        pt.read_data() \
+            .get_user() \
+            .get_islanders() \
+            .add_dummy_cols() \
+            .format_time() \
+            .contains_pic() \
+            .apply_processing() \
+            .get_sentiment() \
+            .weighted_sentiment() \
             .save()
 
 
