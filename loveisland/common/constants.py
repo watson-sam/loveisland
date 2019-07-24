@@ -213,7 +213,7 @@ ISLANDERS = {
         "sex": "male",
         "relevant": True,
         "arrived": 1,
-        "dumped": 0,
+        "dumped": 49,
         "season": 5,
     },
     "tommy": {
@@ -397,8 +397,8 @@ ISLANDERS = {
         "sex": "female",
         "relevant": False,
         "arrived": 26,
-        "dumped": 0,
-        "season": 5,  # DUMPED
+        "dumped": 42,
+        "season": 5,
     },
     "dan": {
         "col": "#C7DDD1",
@@ -437,30 +437,33 @@ ISLANDERS = {
         "sex": "female",
         "relevant": False,
         "arrived": 37,
+        "dumped": 49,
+        "season": 5,
+    },
+    "greg": {
+        "col": "#98E284",
+        "sex": "male",
+        "relevant": False,
+        "arrived": 44,
         "dumped": 0,
         "season": 5,
     },
-    # "george": {
-    #     "col": "#1E191F",
-    #     "sex": "male",
-    #     "relevant": False,
-    #     "arrived": 26,
-    #     "dumped": 36,
-    # },
-    # "chris": {
-    #     "col": "#4B3D2C",
-    #     "sex": "male",
-    #     "relevant": False,
-    #     "arrived": 37,
-    #     "dumped": 0,
-    # },
-    # "francesca": {
-    #     "col": "#AE2B07",
-    #     "sex": "female",
-    #     "relevant": False,
-    #     "arrived": 37,
-    #     "dumped": 0,
-    # },
+    "harley": {
+        "col": "#FE94B4",
+        "sex": "male",
+        "relevant": False,
+        "arrived": 44,
+        "dumped": 0,
+        "season": 5,
+    },
+    "india": {
+        "col": "#FE504F",
+        "sex": "female",
+        "relevant": False,
+        "arrived": 44,
+        "dumped": 0,
+        "season": 5,
+    },
 }
 
 EXTRA_STOPS = [
@@ -579,4 +582,58 @@ APPOS = {
     "'re": " are",
     "wasn't": "was not",
     "we'll": " will",
+}
+
+RESULTS = {
+    "2018-06-26": {
+        ("Dani", "Jack"): 71.1,
+        ("Georgia", "Josh"): 7.2,
+        ("Samira", "Sam"): 6.7,
+        ("Laura", "Wes"): 6.1,
+        ("Ellie", "Alex"): 3.6,
+        ("Megan", "Eyal"): 2.8,
+        ("Zara", "Adam"): 2.4,
+    },
+    "2018-07-04": {
+        ("Dani", "Jack"): 71.9,
+        ("Kaz", "Josh"): 4.2,
+        ("Samira", "Frankie"): 5.7,
+        ("Laura", "Jack"): 7.6,
+        ("Ellie", "Charlie"): 4.0,
+        ("Megan", "Alex"): 1.7,
+        ("Darylle", "Adam"): 1.2,
+        ("Ellie", "Sam"): 0.3,
+    },
+    "2018-07-13": {
+        ("Dani", "Jack"): 47.1,
+        ("Alexandra", "Alex"): 29.4,
+        ("Laura", "Jack"): 6.9,
+        ("Kaz", "Josh"): 5.6,
+        ("Georgia", "Sam"): 4.7,
+        ("Megan", "Wes"): 4.2,
+        ("Ellie", "Charlie"): 2.1,
+    },
+    "2018-07-20": {
+        ("Dani", "Jack"): 50.9,
+        ("Laura", "Paul"): 17.7,
+        ("Alexandra", "Alex"): 16.8,
+        ("Megan", "Wes"): 5.3,
+        ("Kaz", "Josh"): 5.2,
+        ("Laura", "Jack"): 3.3,
+        ("Steph", "Josh"): 0.9,
+    },
+    "2018-07-24": {
+        ("Dani", "Jack"): 58.4,
+        ("Laura", "Paul"): 11.3,
+        ("Alexandra", "Alex"): 10.3,
+        ("Kaz", "Josh"): 9.2,
+        ("Megan", "Wes"): 7.4,
+        ("Laura", "Jack"): 3.5,
+    },
+    "2018-07-29": {
+        ("Dani", "Jack"): 79.66,
+        ("Laura", "Paul"): 8.43,
+        ("Kaz", "Josh"): 6.05,
+        ("Megan", "Wes"): 5.86,
+    },
 }

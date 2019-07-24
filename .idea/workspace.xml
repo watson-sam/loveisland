@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d283744-acf9-4b59-a64c-55ce10ec3fba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/loveisland/common/temp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loveisland/common/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/common/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loveisland/common/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/temp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loveisland/pipeline/get_topics.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/get_topics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/1_pre_show_analysis_SW_2019-06-30.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/1_pre_show_analysis_SW_2019-06-30.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,43 +20,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_topics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="310">
+              <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_tweets.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2296">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="211" column="25" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loveisland/pipeline/process_tweets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1885">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="1065">
+              <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="37" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,7 +75,13 @@
     <findStrings>
       <find>bag_of_words</find>
       <find>w2v_model</find>
+      <find>1</find>
     </findStrings>
+    <replaceStrings>
+      <replace>0</replace>
+      <replace>10</replace>
+      <replace>5</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,20 +100,22 @@
         <option value="$PROJECT_DIR$/loveisland/src/temp.py" />
         <option value="$PROJECT_DIR$/loveisland/src/topic_model_1.py" />
         <option value="$PROJECT_DIR$/loveisland/src/text_analysis.py" />
-        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
         <option value="$PROJECT_DIR$/loveisland/common/functions.py" />
-        <option value="$PROJECT_DIR$/loveisland/common/cli.py" />
-        <option value="$PROJECT_DIR$/loveisland/pipeline/get_topics.py" />
         <option value="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" />
-        <option value="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py" />
+        <option value="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" />
+        <option value="$PROJECT_DIR$/loveisland/pipeline/get_topics.py" />
+        <option value="$PROJECT_DIR$/loveisland/common/cli.py" />
         <option value="$PROJECT_DIR$/loveisland/common/temp.py" />
+        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="834" />
-    <option name="height" value="1050" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -122,6 +125,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,17 +161,10 @@
               <item name="loveisland" type="462c0819:PsiDirectoryNode" />
               <item name="pipeline" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,8 +197,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sentiment">
-    <configuration name="att1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.temp">
+    <configuration name="TweetManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="loveisland" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,12 +206,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/loveisland/" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/loveisland/pipeline/got3/manager" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -267,7 +264,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="text_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="loveisland" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,12 +272,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/loveisland/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/loveisland/common" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loveisland/src/text_analysis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loveisland/common/temp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -312,19 +309,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.att1" />
       <item itemvalue="Python.functions" />
       <item itemvalue="Python.sentiment" />
-      <item itemvalue="Python.text_analysis" />
       <item itemvalue="Python.topic_model_1" />
+      <item itemvalue="Python.TweetManager" />
+      <item itemvalue="Python.temp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sentiment" />
+        <item itemvalue="Python.temp" />
         <item itemvalue="Python.topic_model_1" />
+        <item itemvalue="Python.sentiment" />
+        <item itemvalue="Python.TweetManager" />
         <item itemvalue="Python.functions" />
-        <item itemvalue="Python.att1" />
-        <item itemvalue="Python.text_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -355,12 +352,20 @@
       <workItem from="1563476431414" duration="357000" />
       <workItem from="1563576299316" duration="7427000" />
       <workItem from="1563650130178" duration="1071000" />
-      <workItem from="1563657386741" duration="2083000" />
+      <workItem from="1563657386741" duration="11089000" />
+      <workItem from="1563784960937" duration="1485000" />
+      <workItem from="1563816394865" duration="208000" />
+      <workItem from="1563820987278" duration="57000" />
+      <workItem from="1563821158627" duration="56000" />
+      <workItem from="1563822042451" duration="1840000" />
+      <workItem from="1563897796041" duration="14000" />
+      <workItem from="1563981020803" duration="5615000" />
+      <workItem from="1564001957462" duration="335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90077000" />
+    <option name="totallyTimeSpent" value="108693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,21 +380,21 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15201466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.2863114" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.45872518" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.328125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291536" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.328125" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50183153" side_tool="true" weight="0.292581" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" visible="true" weight="0.3030303" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4981685" weight="0.4649948" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Jupyter" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -404,12 +409,14 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/loveisland$TweetManager.coverage" NAME="TweetManager Coverage Results" MODIFIED="1563722756379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/pipeline/got3/manager" />
     <SUITE FILE_PATH="coverage/loveisland$cli.coverage" NAME="cli Coverage Results" MODIFIED="1561584397113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/common" />
+    <SUITE FILE_PATH="coverage/loveisland$temp.coverage" NAME="temp Coverage Results" MODIFIED="1563988622525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/common" />
     <SUITE FILE_PATH="coverage/loveisland$text_analysis.coverage" NAME="text_analysis Coverage Results" MODIFIED="1562019612746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
     <SUITE FILE_PATH="coverage/loveisland$att1.coverage" NAME="att1 Coverage Results" MODIFIED="1562793994483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/" />
     <SUITE FILE_PATH="coverage/loveisland$functions.coverage" NAME="functions Coverage Results" MODIFIED="1563002900495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/common" />
-    <SUITE FILE_PATH="coverage/loveisland$topic_model_1.coverage" NAME="topic_model_1 Coverage Results" MODIFIED="1563015260361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
-    <SUITE FILE_PATH="coverage/loveisland$sentiment.coverage" NAME="sentiment Coverage Results" MODIFIED="1563622732832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/pipeline" />
+    <SUITE FILE_PATH="coverage/loveisland$topic_model_1.coverage" NAME="topic_model_1 Coverage Results" MODIFIED="1563982003834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
+    <SUITE FILE_PATH="coverage/loveisland$sentiment.coverage" NAME="sentiment Coverage Results" MODIFIED="1563981030083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/pipeline" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/att1.csv" />
@@ -439,26 +446,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetCriteria.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/models/Tweet.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/2019-06-27 00:00:00.csv" />
     <entry file="file://$PROJECT_DIR$/loveisland/src.py" />
@@ -519,31 +506,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../pyLDAvis/pyLDAvis/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/loveisland/common/temp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -551,40 +514,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_topics.py">
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        <state>
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/models/Tweet.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetCriteria.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-08-04.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-28.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-26.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-25.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-24.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-23.csv" />
+    <entry file="file://$PROJECT_DIR$/data/season_4/raw_tweets/2018-07-22.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/got3/manager/TweetManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="52" column="15" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+        <state relative-caret-position="870">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
+    <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2296">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="15">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/season_4/processed/2018-07-19.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4971" selection-start-column="4971" selection-end-column="4971" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/pipeline/get_topics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="122" column="48" selection-start-line="122" selection-start-column="48" selection-end-line="122" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/pipeline/process_tweets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1885">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="1065">
+          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="211" column="25" selection-start-line="211" selection-start-column="25" selection-end-line="211" selection-end-column="25" />
         </state>
       </provider>
     </entry>
