@@ -1,7 +1,14 @@
 import datetime as dt
 import pandas as pd
 import glob
-from loveisland.common.constants import ISLANDERS
+from loveisland.common.constants import ISLANDERS_4, ISLANDERS_5
+
+
+def get_islanders_s(season=5):
+    if season == 4:
+        return ISLANDERS_4
+    else:
+        return ISLANDERS_5
 
 
 class Functions(object):
@@ -33,16 +40,16 @@ class Functions(object):
         return df
 
     @staticmethod
-    def get_palette():
+    def get_palette(season=5):
         palette = {}
-        for key, item in ISLANDERS.items():
+        for key, item in get_islanders_s(season).items():
             palette[key] = item["col"]
         return palette
 
     @staticmethod
     def get_islanders(when="original", season=5):
         islanders = []
-        for key, item in ISLANDERS.items():
+        for key, item in get_islanders_s(season).items():
             if item["season"] == season:
                 if when == "original" and item["arrived"] == 1:
                     islanders.append(key)
@@ -72,7 +79,14 @@ class Functions(object):
 
     @staticmethod
     def get_islander_df(season=5):
-        df = pd.DataFrame.from_dict(ISLANDERS, orient="index")
+        df = pd.DataFrame.from_dict(get_islanders_s(season), orient="index")
         df = df[df["season"] == season]
         df.index.name = "islander"
         return df.reset_index()
+
+    @staticmethod
+    def get_islanders_s(season=5):
+        if season == 4:
+            return ISLANDERS_4
+        else:
+            return ISLANDERS_5

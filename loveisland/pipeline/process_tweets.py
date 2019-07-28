@@ -1,5 +1,5 @@
 from loveisland.common.functions import Functions as F
-from loveisland.common.constants import ISLANDERS, PUNC_LIST, EXTRA_STOPS, APPOS
+from loveisland.common.constants import PUNC_LIST, EXTRA_STOPS, APPOS
 from loveisland.common.cli import base_parser
 
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
@@ -14,13 +14,11 @@ nlp = spacy.load("en_core_web_lg")
 
 
 class ProcessTweets(object):
-    def __init__(self, args, d0, islanders):
+    def __init__(self, args, d0):
         self.args = args
         self.d0 = d0
         self.df = None
-        self.islanders = {
-            k: v for k, v in islanders.items() if v["season"] == args.season
-        }
+        self.islanders = F.get_islanders_s(args.season)
 
     def read_data(self):
         """Import data"""
@@ -168,7 +166,7 @@ def main(args):
     for i in range(len(dates) - 1):
         d0, d1 = F.get_dates(i, dates)
 
-        pt = ProcessTweets(args, d0, ISLANDERS)
+        pt = ProcessTweets(args, d0)
         pt.read_data() \
             .get_user() \
             .get_islanders() \

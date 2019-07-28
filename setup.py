@@ -10,6 +10,7 @@ setup(
         "console_scripts": [
             "get_tweets.py = loveisland.pipeline.get_tweets.run",
             "preprocess.py = loveisland.pipeline.process_tweets.run",
+            "get_topics.py = loveisland.pipeline.get_topics.run",
         ]
     },
     install_requires=[],

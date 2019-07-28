@@ -3,8 +3,8 @@ import numpy as np
 import os
 
 from loveisland.common.cli import base_parser
-from loveisland.common.constants import ISLANDERS
 from loveisland.common.functions import Functions as F
+from loveisland.common.functions import get_islanders_s
 
 
 class AggregateData:
@@ -17,9 +17,7 @@ class AggregateData:
         self.inc_islander()
 
         self.agg_df = pd.DataFrame()
-        self.islanders = {
-            k: v for k, v in ISLANDERS.items() if v["season"] == args.season
-        }
+        self.islanders = get_islanders_s(args.season)
 
     def inc_islander(self, col="islanders"):
         self.df[col] = self.df[col].apply(lambda x: F.str_to_list(x))

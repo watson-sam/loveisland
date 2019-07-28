@@ -32,6 +32,13 @@ each tweet with any and all of the islanders it directly references.
 python3 venv/bin/preprocess.py --start_date 2019-06-26 --end_date 2019-06-27
 ```
 
+## Topic Models
+Topic Models are calculated per day (ie the corpus is all scraped tweets sent on the same 
+date), 
+```
+python3 venv/bin/get_topics.py --start_date 2019-06-26 --end_date 2019-06-27
+```
+
 ## Notebooks
 
 
