@@ -49,7 +49,7 @@ ISLANDERS = {
     },
     "megan": {
         "col": "#5D3BAC",
-        "sex": "male",
+        "sex": "female",
         "relevant": True,
         "arrived": 8,
         "dumped": 59,  # Finished 4th, never dumped, number is for prediction
@@ -57,7 +57,7 @@ ISLANDERS = {
     },
     "wez": {
         "col": "#ED4F8A",
-        "sex": "female",
+        "sex": "male",
         "relevant": True,
         "arrived": 1,
         "dumped": 59,  # Finished 4th, never dumped, number is for prediction
@@ -205,7 +205,7 @@ ISLANDERS = {
         "sex": "male",
         "relevant": True,
         "arrived": 14,
-        "dumped": 0,
+        "dumped": 52,
         "season": 5,
     },
     "michael": {
@@ -245,7 +245,7 @@ ISLANDERS = {
         "sex": "female",
         "relevant": True,
         "arrived": 1,
-        "dumped": 0,
+        "dumped": 52,
         "season": 5,
     },
     "lucie": {
@@ -381,7 +381,7 @@ ISLANDERS = {
         "sex": "male",
         "relevant": False,
         "arrived": 26,
-        "dumped": 0,
+        "dumped": 39,
         "season": 5,
     },
     "belle": {
@@ -429,7 +429,7 @@ ISLANDERS = {
         "sex": "male",
         "relevant": False,
         "arrived": 37,
-        "dumped": 0,
+        "dumped": 52,
         "season": 5,
     },
     "francesca": {
@@ -450,10 +450,10 @@ ISLANDERS = {
     },
     "harley": {
         "col": "#FE94B4",
-        "sex": "male",
+        "sex": "female",
         "relevant": False,
         "arrived": 44,
-        "dumped": 0,
+        "dumped": 52,
         "season": 5,
     },
     "india": {
@@ -584,7 +584,7 @@ APPOS = {
     "we'll": " will",
 }
 
-RESULTS = {
+RESULTS_4 = {
     "2018-06-26": {
         ("Dani", "Jack"): 71.1,
         ("Georgia", "Josh"): 7.2,
@@ -635,5 +635,53 @@ RESULTS = {
         ("Laura", "Paul"): 8.43,
         ("Kaz", "Josh"): 6.05,
         ("Megan", "Wes"): 5.86,
+    },
+}
+
+RESULTS_5 = {
+    "2019-06-26": {
+        ("Arabella", "Danny"): 1,
+        ("Amy", "Curtis"): 1,
+        ("Maura", "Tom"): 1,
+        ("Lucie", "Anton"): 7,
+        ("Amber", "Michael"): 7,
+        ("Anna", "Jordan"): 7,
+        ("Molly", "Tommy"): 7,
+    },
+    "2019-07-07": {
+        ("Jourdan", "Danny"): 1,
+        ("Amy", "Curtis"): 1,
+        ("Lucie", "George"): 1,
+        ("Belle", "Anton"): 8,
+        ("Maura", "Marvin"): 8,
+        ("Joanna", "Michael"): 8,
+        ("Anna", "Ovie"): 8,
+        ("Molly", "Tommy"): 8,
+    },
+    "2019-07-12": {
+        ("Anna", "Jordan"): 1,
+        ("Michael", "Joanna"): 1,
+        ("Belle", "Anton"): 7,
+        ("Maura", "Chris"): 7,
+        ("Francesca", "Curtis"): 7,
+        ("Amber", "Ovie"): 7,
+        ("Molly", "Tommy"): 7,
+    },
+    "2019-07-19": {
+        ("Anna", "Jordan"): 1,
+        ("Michael", "Francesca"): 1,
+        ("Belle", "Anton"): 6,
+        ("Maura", "Curtis"): 6,
+        ("Amber", "Ovie"): 6,
+        ("Molly", "Tommy"): 6,
+    },
+    "2019-07-23": {
+        ("Anna", "Jordan"): 1,
+        ("Harley", "Chris"): 1,
+        ("Belle", "Anton"): 7,
+        ("India", "Ovie"): 7,
+        ("Maura", "Curtis"): 7,
+        ("Amber", "Greg"): 7,
+        ("Molly", "Tommy"): 7,
     },
 }

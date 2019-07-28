@@ -1,4 +1,5 @@
 from loveisland.common.functions import Functions as F
+from loveisland.common.cli import base_parser
 
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import CountVectorizer
@@ -8,10 +9,6 @@ import os
 import pickle
 import pandas as pd
 import pyLDAvis.sklearn
-
-from argparse import ArgumentParser
-import dateutil.parser
-import datetime as dt
 
 N_TOPICS = [10, 15, 20, 25, 30]
 L_DECAY = [0.3, 0.5, 0.7, 0.9]
@@ -99,41 +96,6 @@ class GetTopics(object):
             ),
         )
         return p
-
-
-def base_parser():
-    parser = ArgumentParser()
-    parser.add_argument(
-        "--bucket",
-        type=str,
-        default="/Users/samwatson/projects/loveisland/data/",
-    )
-    parser.add_argument(
-        "-s",
-        "--start_date",
-        help="Start Date (YYYY-MM-DD)",
-        type=dateutil.parser.isoparse,
-        default=dt.datetime.strptime("2019-07-02", "%Y-%m-%d"),
-    )
-    parser.add_argument(
-        "-e",
-        "--end_date",
-        help="End Date (YYYY-MM-DD)",
-        type=dateutil.parser.isoparse,
-        default=dt.datetime.strptime("2019-07-03", "%Y-%m-%d"),
-    )
-    parser.add_argument(
-        "--yesterday",
-        help="If to scrape tweets only from yesterday -> today",
-        action="store_true",
-    )
-    parser.add_argument(
-        "--season",
-        help="Which season are we concentrating on?",
-        type=int,
-        default=5,
-    )
-    return parser
 
 
 def main(args):
