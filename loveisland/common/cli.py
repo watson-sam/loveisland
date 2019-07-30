@@ -33,6 +33,6 @@ def base_parser():
         "--season",
         help="Which season are we concentrating on?",
         type=int,
-        default=4,
+        default=5,
     )
     return parser

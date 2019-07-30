@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d283744-acf9-4b59-a64c-55ce10ec3fba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/loveisland/src/scrape_wiki.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loveisland/common/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/cli.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loveisland/common/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/common/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/common/functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/src/agg_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/loveisland/src/agg_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loveisland/src/text_analysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/2_w1-3_sentiment_analysis_SW_2019-07-10.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Topic Models.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/prediction.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/prediction.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loveisland/src/agg_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
+            <state relative-caret-position="670">
+              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -44,13 +36,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="730">
+              <caret line="799" column="29" selection-start-line="799" selection-start-column="29" selection-end-line="799" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,14 +110,14 @@
         <option value="$PROJECT_DIR$/loveisland/pipeline/get_tweets.py" />
         <option value="$PROJECT_DIR$/loveisland/pipeline/get_topics.py" />
         <option value="$PROJECT_DIR$/loveisland/common/temp.py" />
-        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
         <option value="$PROJECT_DIR$/loveisland/pipeline/process_tweets.py" />
         <option value="$PROJECT_DIR$/loveisland/src/scrape_wiki.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/loveisland/common/cli.py" />
         <option value="$PROJECT_DIR$/loveisland/common/functions.py" />
         <option value="$PROJECT_DIR$/loveisland/src/agg_functions.py" />
+        <option value="$PROJECT_DIR$/loveisland/common/cli.py" />
+        <option value="$PROJECT_DIR$/loveisland/common/constants.py" />
       </list>
     </option>
   </component>
@@ -132,12 +133,38 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
               <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="season_5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="season_5" type="462c0819:PsiDirectoryNode" />
+              <item name="processed" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
+              <item name="loveisland" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="season_5" type="462c0819:PsiDirectoryNode" />
+              <item name="raw_tweets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="loveisland" type="b2602c69:ProjectViewProjectNode" />
@@ -154,7 +181,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,11 +392,15 @@
       <workItem from="1564325152886" duration="5435000" />
       <workItem from="1564337837516" duration="308000" />
       <workItem from="1564345908148" duration="1415000" />
+      <workItem from="1564388088128" duration="1502000" />
+      <workItem from="1564414779541" duration="58000" />
+      <workItem from="1564504748719" duration="1705000" />
+      <workItem from="1564521615827" duration="206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127425000" />
+    <option name="totallyTimeSpent" value="130896000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,12 +415,12 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498169" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1929182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.39498433" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.39498433" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,7 +452,7 @@
     <SUITE FILE_PATH="coverage/loveisland$att1.coverage" NAME="att1 Coverage Results" MODIFIED="1562793994483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/" />
     <SUITE FILE_PATH="coverage/loveisland$functions.coverage" NAME="functions Coverage Results" MODIFIED="1564346114102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/common" />
     <SUITE FILE_PATH="coverage/loveisland$topic_model_1.coverage" NAME="topic_model_1 Coverage Results" MODIFIED="1563982003834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
-    <SUITE FILE_PATH="coverage/loveisland$agg_functions.coverage" NAME="agg_functions Coverage Results" MODIFIED="1564347620132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
+    <SUITE FILE_PATH="coverage/loveisland$agg_functions.coverage" NAME="agg_functions Coverage Results" MODIFIED="1564515341310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
     <SUITE FILE_PATH="coverage/loveisland$constants.coverage" NAME="constants Coverage Results" MODIFIED="1564179956205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/common" />
     <SUITE FILE_PATH="coverage/loveisland$scrape_wiki.coverage" NAME="scrape_wiki Coverage Results" MODIFIED="1564328383090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/src" />
     <SUITE FILE_PATH="coverage/loveisland$sentiment.coverage" NAME="sentiment Coverage Results" MODIFIED="1563981030083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loveisland/pipeline" />
@@ -610,10 +640,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/season_5/raw_tweets/2019-07-27.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-167641" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/common/temp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -627,40 +682,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/cli.py">
+    <entry file="file://$PROJECT_DIR$/loveisland/src/agg_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="670">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loveisland/common/constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="252" column="11" selection-start-line="252" selection-start-column="11" selection-end-line="252" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/common/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loveisland/src/agg_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="730">
+          <caret line="799" column="29" selection-start-line="799" selection-start-column="29" selection-end-line="799" selection-end-column="29" />
         </state>
       </provider>
     </entry>

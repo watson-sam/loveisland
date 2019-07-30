@@ -262,7 +262,7 @@ ISLANDERS_5 = {
     },
     "anton": {
         "arrived": 1,
-        "dumped": 59,
+        "dumped": 56,
         "age": 24,
         "season": 5,
         "sex": "male",
@@ -271,7 +271,7 @@ ISLANDERS_5 = {
     },
     "belle": {
         "arrived": 26,
-        "dumped": 59,
+        "dumped": 56,
         "age": 21,
         "season": 5,
         "sex": "female",
@@ -795,5 +795,11 @@ RESULTS_5 = {
         ("Maura", "Curtis"): 7,
         ("Amber", "Greg"): 7,
         ("Molly", "Tommy"): 7,
+    },
+    "2019-07-29": {
+        ("India", "Ovie"): 3,
+        ("Maura", "Curtis"): 4,
+        ("Amber", "Greg"): 1,
+        ("Molly", "Tommy"): 2,
     },
 }
