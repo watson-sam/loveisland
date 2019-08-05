@@ -7,3 +7,5 @@ nltk
 jupyter
 spacy
 gensim
+sklearn
+pyLDAvis

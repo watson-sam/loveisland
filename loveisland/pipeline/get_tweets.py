@@ -1,58 +1,64 @@
 from loveisland.pipeline.got3.manager import TweetCriteria, TweetManager
-from loveisland.common.functions import get_dates, get_date_list
+from loveisland.common.functions import Functions as F
 from loveisland.common.cli import base_parser
 
 import pandas as pd
 import os
 
 
-def get_tweets(d0, d1):
-    tweetCriteria = (
-        TweetCriteria()
-        .setQuerySearch("loveisland")
-        .setSince(str(d0))
-        .setUntil(str(d1))
-        # .setMaxTweets(100)
-        .setLang("en")
-    )
-    return TweetManager.getTweets(tweetCriteria)
+class GetTweets(object):
+    def __init__(self, args, d0, d1):
+        self.args = args
+        self.d0 = d0
+        self.d1 = d1
+        self.all_tweets = None
+        self.all_info = []
 
+    def get_tweets(self):
+        self.all_tweets = TweetManager.getTweets(
+            TweetCriteria()
+            .setQuerySearch("loveisland")
+            .setSince(str(self.d0))
+            .setUntil(str(self.d1))
+            .setLang("en")
+        )
+        return self
 
-def fill_dict(tweet):
-    return {
-        "text": tweet.text,
-        "url": tweet.permalink,
-        "favs": tweet.favorites,
-        "date": tweet.date,
-        "retwe": tweet.retweets,
-    }
+    @staticmethod
+    def get_info(tweet):
+        return {
+            "text": tweet.text,
+            "url": tweet.permalink,
+            "favs": tweet.favorites,
+            "date": tweet.date,
+            "retwe": tweet.retweets,
+        }
 
+    def fill_list(self):
+        for tweet in self.all_tweets:
+            self.all_info.append(self.get_info(tweet))
+        return self
 
-def fill_list(info, tweet):
-    info.append(fill_dict(tweet))
-
-
-def get_info(tweets):
-    info = []
-    for tweet in tweets:
-        fill_list(info, tweet)
-    return info
-
-
-def save(args, info, d0):
-    path = os.path.join(args.bucket, "raw_tweets", str(d0) + ".csv")
-    pd.DataFrame(info).to_csv(path, index=False)
+    def save(self):
+        path = os.path.join(
+            self.args.bucket,
+            "season_" + str(self.args.season),
+            "raw_tweets",
+            str(self.d0) + ".csv",
+        )
+        pd.DataFrame(self.all_info).to_csv(path, index=False)
+        return self
 
 
 def main(args):
-    dates = get_date_list(args)
+    F.set_up_folders(args)
+    dates = F.get_date_list(args)
     for i in range(len(dates) - 1):
-        d0, d1 = get_dates(i, dates)
-        print(d0)
-        tweets = get_tweets(d0, d1)
-        info = get_info(tweets)
-        save(args, info, d0)
-        print(d0, len(info))
+        d0, d1 = F.get_dates(i, dates)
+        print("Running for", d0)
+        gt = GetTweets(args, d0, d1)
+        gt.get_tweets().fill_list().save()
+        print("Done", d0, "found", len(gt.all_info), "tweets")
 
 
 def run():

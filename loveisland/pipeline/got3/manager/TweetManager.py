@@ -131,7 +131,7 @@ class TweetManager:
             urlGetData += " " + tweetCriteria.querySearch
 
         if hasattr(tweetCriteria, "lang"):
-            urlLang = "lang=" + tweetCriteria.lang + "&"
+            urlLang = "l=" + tweetCriteria.lang + "&"
         else:
             urlLang = ""
         url = url % (urllib.parse.quote(urlGetData), urlLang, refreshCursor)
