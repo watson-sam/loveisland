@@ -47,7 +47,9 @@ python3 venv/bin/get_topics.py --start_date 2019-06-25 --end_date 2019-06-26
 To make the notebooks run a lot quicker and be generally less computing intensive, after collecting
 all the data, we run the `src/agg_data.py` script which compiles the relevant data into a much more compact
 and easy to use format.
-```python3 loveisland/src/agg_data.py --start_date 2019-06-03 --end_date 2019-07-30```
+```
+python3 loveisland/src/agg_data.py --start_date 2019-06-03 --end_date 2019-07-30
+```
 
 
 Also in the `src/` folder is a script which scrapes wiki and makes compiling the `constants` a lot quicker.
