@@ -1,5 +1,10 @@
 # loveisland
 
+A collection of scripts that form a pipeline to scrape tweets with the hashtag `LoveIsland`, preprocess and apply 
+some algorithms to, namely we find the sentiment of each tweet, produce topic models and also make soome predictions. 
+This repo is the basis of my series "100% My Type on Paper: Watching Love Island via Data Analytics" on Medium which 
+can be found by following the links below. 
+
 ## Install
 1. Clone the repo: `git clone git@github.com:watson-sam/loveisland.git`
 2. Run `make full`
@@ -55,13 +60,14 @@ python3 loveisland/src/agg_data.py --start_date 2019-06-03 --end_date 2019-07-30
 Also in the `src/` folder is a script which scrapes wiki and makes compiling the `constants` a lot quicker.
  
 ## Notebooks
-1. 1_pre_show_analysis - In this notebook we go through features of tweets that were posted 
+Found in the `notebooks/` folder these notebook are the basis for a series of Medium posts which are also linked.
+- 1_pre_show_analysis - In this notebook we go through features of tweets that were posted 
 prior to Season 5 of Love Island starting. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-1-81aec077a445)
-2. 2_sentiment_analysis - Here we look at the sentiment from tweets and determine if we can track real life
+- 2_sentiment_analysis - Here we look at the sentiment from tweets and determine if we can track real life
 events being reacted to on twitter from the first 3 weeks of the show. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-2-fb76dbc87070)
-3. 3_topic_models - In the third notebook we take a look at topic models from 2 weeks worth of tweets and evaluate 
+- 3_topic_models - In the third notebook we take a look at topic models from 2 weeks worth of tweets and evaluate 
 if the algorithms can correctly pull out the talking points of the episodes [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-3-9f83ac8f721d)
-4. 4_winner_prediction - Finally we predict how long each individual contestant will last for, as well
+- 4_winner_prediction - Finally we predict how long each individual contestant will last for, as well
 as the overall winner of the show. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-4-738ff9505aa5)
 
 
