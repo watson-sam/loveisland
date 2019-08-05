@@ -53,19 +53,18 @@ and easy to use format.
 Also in the `src/` folder is a script which scrapes wiki and makes compiling the `constants` a lot quicker.
  
 ## Notebooks
+1. 1_pre_show_analysis - In this notebook we go through features of tweets that were posted 
+prior to Season 5 of Love Island starting. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-1-81aec077a445)
+2. 2_sentiment_analysis - Here we look at the sentiment from tweets and determine if we can track real life
+events being reacted to on twitter from the first 3 weeks of the show. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-2-fb76dbc87070)
+3. 3_topic_models - In the third notebook we take a look at topic models from 2 weeks worth of tweets and evaluate 
+if the algorithms can correctly pull out the talking points of the episodes [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-3-9f83ac8f721d)
+4. 4_winner_prediction - Finally we predict how long each individual contestant will last for, as well
+as the overall winner of the show. [medium post link](https://medium.com/@watson.sam/100-my-type-on-paper-watching-love-island-via-data-analytics-part-4-738ff9505aa5)
 
 
+## Other
+If you are using it and there is an obvious error please either flag it or submit a PR,
+whilst I won't be actively maintaining as the series is now over I will make sure I address anything ASAP, plus 
+we might see a rebirth of this project when Love Island is next on so if you wanted to get involved please get in touch!
 
-
-### Ideas
-- N tweets per day of the week, time of day, date (done)
-- N tweets per person -> trended (need to do "Tom" and "Tommy" differently) (done)
-- Bigram and trigram analysis (can we pull out couples??)
-- Topic models per day, week, all time 
-- Most "influential people" (by likes / retweets)
-- Sentiment per person (done)
-- "Weighted" sentiment (n likes/retweets)
-- n pictures ("pic.twitter.com") etc (done)
-
-
-- Devicive days (ie recoupling after casa amor) - distirbution per islander to see if two disrtinct gorups (for and against each isaldner)

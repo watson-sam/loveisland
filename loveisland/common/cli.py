@@ -26,7 +26,7 @@ def base_parser():
     )
     parser.add_argument(
         "--yesterday",
-        help="If to scrape tweets only from yesterday -> today",
+        help="If to scrape tweets only from yesterday",
         action="store_true",
     )
     parser.add_argument(

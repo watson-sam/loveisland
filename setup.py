@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="loveisland",
-    version="0.1.0",  # Defined in version.txt
+    version="0.1.0",
     packages=find_packages(),
     entry_points={
         "console_scripts": [
@@ -14,9 +14,8 @@ setup(
         ]
     },
     install_requires=[],
-    # metadata for upload to PyPI
     author="Sam Watson",
-    author_email="quadquants@gmail.com",
-    description="Just me doing bits",
-    url="http://www.soundcloud.com/quadras_music",
+    author_email="If you want this please just ask.",
+    description="Love Island but with data.",
+    url="https://github.com/watson-sam/loveisland",
 )

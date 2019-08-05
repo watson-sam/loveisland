@@ -9,3 +9,5 @@ spacy
 gensim
 sklearn
 pyLDAvis
+bs4
+requests
