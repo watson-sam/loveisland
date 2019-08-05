@@ -51,6 +51,7 @@ class GetTweets(object):
 
 
 def main(args):
+    F.set_up_folders(args)
     dates = F.get_date_list(args)
     for i in range(len(dates) - 1):
         d0, d1 = F.get_dates(i, dates)

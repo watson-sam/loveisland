@@ -8,7 +8,7 @@ def base_parser():
     parser.add_argument(
         "--bucket",
         type=str,
-        default="/Users/samwatson/projects/loveisland/data/",
+        default="~/projects/loveisland/data/",
     )
     parser.add_argument(
         "-s",
@@ -22,7 +22,7 @@ def base_parser():
         "--end_date",
         help="End Date (YYYY-MM-DD)",
         type=dateutil.parser.isoparse,
-        default=(dt.datetime.now() + dt.timedelta(days=1)),
+        default=dt.datetime.strptime("2019-08-05", "%Y-%m-%d"),
     )
     parser.add_argument(
         "--yesterday",

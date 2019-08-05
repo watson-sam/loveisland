@@ -1,6 +1,7 @@
 import datetime as dt
 import pandas as pd
 import glob
+import os
 from loveisland.common.constants import ISLANDERS_4, ISLANDERS_5
 
 
@@ -90,3 +91,12 @@ class Functions(object):
             return ISLANDERS_4
         else:
             return ISLANDERS_5
+
+
+    @staticmethod
+    def set_up_folders(args):
+        s_path = os.path.join(args.bucket, "season_" + str(args.season))
+        if not os.path.exists(s_path):
+            os.mkdir(s_path)
+            for f in ["models", "processed", "pylda_htmls", "raw_tweets", "vocab"]:
+                os.mkdir(os.path.join(s_path, f))
